@@ -148,7 +148,7 @@ def first():
         password = "MLpkqf25fxet"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
-        message["Subject"] = "NEW KOREA API ... 1"
+        message["Subject"] = "NEW API ... 1"
         message["From"] = sender_email
         message["To"] = receiver_email
         text = """\
@@ -185,7 +185,7 @@ def second():
         password = "MLpkqf25fxet"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
-        message["Subject"] = "NEW KOREA API ... 2"
+        message["Subject"] = "NEW API ... 2"
         message["From"] = sender_email
         message["To"] = receiver_email
         text = """\
