@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
-limiter = Limiter(get_remote_address, app=app, default_limits=["40 per day", "40 per hour"])
+limiter = Limiter(get_remote_address, app=app, default_limits=["6 per day", "6 per hour"])
 secret_keyx = secrets.token_urlsafe(24)
 app.secret_key = secret_keyx
 
